@@ -1,0 +1,14 @@
+{
+  "name": "smartbuy",
+  "version": "1.0.0",
+  "description": "SmartBuy Price Comparator Monorepo",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix frontend\" \"backend/venv/bin/python backend/app.py\"",
+    "install:frontend": "npm install --prefix frontend",
+    "install:backend": "backend/venv/bin/pip install -r backend/requirements.txt",
+    "install:all": "npm install && npm run install:frontend && npm run install:backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
